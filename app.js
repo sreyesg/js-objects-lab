@@ -124,12 +124,17 @@ with the Pokemon it evolved into.
 Solve Exercise 7 here:
 */
 
-console.log(game.party.name)
+console.log(game.party)
 
-game.party.map(() => {
-  
+game.party.map((cachedPokemon, partyIdx) => {
+  let evolvedIdx = cachedPokemon.number
+  console.log(evolvedIdx)
+  console.log(partyIdx)
+  game.party.splice(partyIdx, 1, pokemon[evolvedIdx])
+
 })
 
+console.log(game.party)
 /*
 Exercise 8
 1. Print the name of each Pokémon in your party.
