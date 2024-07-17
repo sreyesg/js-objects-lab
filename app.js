@@ -58,10 +58,10 @@ const startPokemons = pokemon.filter((element)=>{
 });
 // how many start Pokemons did you find?
 
-console.log(`there are ${startPokemons.length} start Pokemons available`)
+// console.log(`there are ${startPokemons.length} start Pokemons available`)
 
 game.party.push(startPokemons[1])
-console.log(game.party)
+// console.log(game.party)
 
 /*
 Exercise 5
@@ -72,5 +72,14 @@ Exercise 5
 Solve Exercise 5 here:
 */
 
+// find pokemons type Psychic
+const pokemonsTypePsychic = pokemon.filter((element)=>{
+    return element.type === "psychic"
+})
 
+// add 2 pokemon Type Psychic to party
+game.party.push(pokemonsTypePsychic[3])
+game.party.push(pokemonsTypePsychic[1])
+game.party.push(pokemon[37])
 
+// console.log(game.party)
