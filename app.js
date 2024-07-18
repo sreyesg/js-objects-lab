@@ -66,12 +66,13 @@ game.party.push(startPokemons[1])
 /*
 Exercise 5
 1. Choose three more Pokémon from the `pokemon` array and add them to your party.
-2. Consider different attributes like 'type' or 'HP' for your selection. Which array method will you use to add them?
+2. Consider different attributes like 'type' or 'HP' for your selection.
+Which array method will you use to add them?
 
 
 Solve Exercise 5 here:
 */
-
+// I want to add two Psychic pokemons
 // find pokemons type Psychic
 const pokemonsTypePsychic = pokemon.filter((element)=>{
     return element.type === "psychic"
@@ -124,17 +125,17 @@ with the Pokemon it evolved into.
 Solve Exercise 7 here:
 */
 
-console.log(game.party)
+// console.log(game.party)
 
 game.party.map((cachedPokemon, partyIdx) => {
   let evolvedIdx = cachedPokemon.number
-  console.log(evolvedIdx)
-  console.log(partyIdx)
+  // console.log(evolvedIdx)
+  // console.log(partyIdx)
   game.party.splice(partyIdx, 1, pokemon[evolvedIdx])
 
 })
 
-console.log(game.party)
+// console.log(game.party)
 /*
 Exercise 8
 1. Print the name of each Pokémon in your party.
@@ -144,3 +145,8 @@ Solve Exercise 8 here:
 */
 
 
+const pokemonNames = game.party.map((pokemon) => {
+  return pokemon.name 
+})
+
+console.log("The pokemons I caught are: ",pokemonNames)
