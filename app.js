@@ -160,14 +160,23 @@ Exercise 9
 Solve Exercise 9 here:
 */
 
-const starterPokemons = pokemon.filter((element) => {
-  if(element.starter === true) return "caca"
+// How to access array as result in filter array method
+const starterPokemons = pokemon.filter((element, idx) => {
+  if(element.starter === true) return element.name
+  return null
+
+}).map((element)=>{
+  return element.name
 })
 
+
 console.log("this>>>", starterPokemons)
+// console.log("this>>>", pokemon[1].name)
 /*
 Exercise 10
-Create a method called `catchPokemon` and add it to the `game` object. You should not need to edit the original game object directly. This method should:
+Create a method called `catchPokemon` and add it to the `game` object.
+ You should not need to edit the original game object directly. 
+ This method should:
   - Accept an object as a parameter called `pokemonObj`
   - Add the `pokemonObj` to the `game.party` array.
   - not return anything
