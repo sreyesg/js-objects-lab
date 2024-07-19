@@ -170,7 +170,7 @@ const starterPokemons = pokemon.filter((element, idx) => {
 })
 
 
-console.log("this>>>", starterPokemons)
+// console.log("this>>>", starterPokemons)
 // console.log("this>>>", pokemon[1].name)
 /*
 Exercise 10
@@ -181,15 +181,25 @@ Create a method called `catchPokemon` and add it to the `game` object.
   - Add the `pokemonObj` to the `game.party` array.
   - not return anything
 
-After writing this method, call it and pass in a Pokemon object of your choice from the `pokemon` data to catch it.
+After writing this method, call it and pass in a Pokemon object of your choice
+ from the `pokemon` data to catch it.
 
 Solve Exercise 10 here:
 */
+game.catchPokemon = (pokemonObj) => {
+  game.party.push(pokemonObj)
+}
+
+game.catchPokemon(pokemon[37])
+
+// console.log(game.party)
+
 
 
 /*
 Exercise 11
-1. Copy the `catchPokemon` method that you just wrote above, and paste it below. Modify it so that it also decreases the number of pokeballs in your inventory each time you catch a Pokémon.
+1. Copy the `catchPokemon` method that you just wrote above, and paste it below. Modify it so 
+that it also decreases the number of pokeballs in your inventory each time you catch a Pokémon.
 2. How will you find and update the quantity of pokeballs in the `game.items` array?
 
 Tips:
@@ -200,6 +210,17 @@ Also, log the `game.items` array to confirm that the pokeball quantity is being 
 Solve Exercise 11 here:
 */
 
+game.catchPokemon = (pokemonObj) => {
+  game.party.push(pokemonObj)
+  game.items[1].quantity -=1
+}
+
+// console.log(game.items)
+game.catchPokemon(pokemon[73])
+// console.log(game.items)
+
+
+
 /*
 Exercise 12
 1. Similar to Exercise 6, now complete gyms with a difficulty below 6. How will you approach this?
@@ -207,12 +228,21 @@ Exercise 12
 
 Solve Exercise 12 here:
 */
+// console.log(game.gyms)
 
+game.gyms.filter( (gym) => {
+  if (gym.difficulty < 6){
+    gym.completed = true
+  }
+})
+
+// console.log(game.gyms)
 
 /*
 Exercise 13
 1. Create a `gymStatus` method in `game` to tally completed and incomplete gyms.
-2. How will you iterate through the `gyms` array and update the tally? Remember to log the final tally.
+2. How will you iterate through the `gyms` array and update the tally? 
+Remember to log the final tally.
 
 This method should:
   - Not accept any arguments.
@@ -231,7 +261,22 @@ For example, if five gym objects have a value of `true` on their `completed` pro
 
 Solve Exercise 13 here:
 */
-
+game.gymStatus = () => {
+  const gymTally = {
+    completed: 0,
+    incompleted: 0
+  }
+  game.gyms.map((gym) => {
+    if (gym.completed === true) {
+      gymTally.completed += 1
+    }else {
+      gymTally.incompleted += 1
+    }
+  })
+  console.log(gymTally)
+}
+// console.log(game.gyms)
+// game.gymStatus()
 
 /*
 Exercise 14
@@ -245,6 +290,9 @@ This method should:
 Solve Exercise 14 here:
 */
 
+game.partyCount = () => {
+  return game.party.length
+}
 
-
+console.log(game.partyCount())
 
