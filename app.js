@@ -280,6 +280,8 @@ game.gymStatus = () => {
 
 /*
 Exercise 14
+
+
 1. Add a `partyCount` method to `game` that counts the number of Pokémon in your party.
 
 This method should:
@@ -290,9 +292,13 @@ This method should:
 Solve Exercise 14 here:
 */
 
+
 game.partyCount = () => {
-  return game.party.length
+  return `the amount of pokemons found in party is ${game.party.length}`
 }
 
 console.log(game.partyCount())
+
+// Mark, if you check the line in console, you would see that the Party Method has been added to the object game
+  console.log(game)
 
