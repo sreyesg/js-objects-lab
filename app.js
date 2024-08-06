@@ -94,7 +94,7 @@ the `completed` property.
 
 Solve Exercise 6 here:
 */
-console.log(game.gyms)
+// console.log(game.gyms)
 
 const completeGymsBelow3 = () => {
     game.gyms.map((gym) => {
@@ -104,7 +104,7 @@ const completeGymsBelow3 = () => {
     })
 }
 completeGymsBelow3()
-console.log(game.gyms)
+// console.log(game.gyms)
 
 
 /*
@@ -129,15 +129,11 @@ with the Pokemon it evolved into.
 Solve Exercise 7 here:
 */
 
-// console.log(game.party)
 
-game.party.map((cachedPokemon, partyIdx) => {
-  let evolvedIdx = cachedPokemon.number
-  // console.log(evolvedIdx)
-  // console.log(partyIdx)
-  game.party.splice(partyIdx, 1, pokemon[evolvedIdx])
+game.party.splice(0, 1, pokemon[4])
+  
+  console.log('after', game.party)
 
-})
 
 // console.log(game.party)
 /*
