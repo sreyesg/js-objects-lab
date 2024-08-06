@@ -297,8 +297,47 @@ game.partyCount = () => {
   return `the amount of pokemons found in party is ${game.party.length}`
 }
 
-console.log(game.partyCount())
+// console.log(game.partyCount())
 
 // Mark, if you check the line in console, you would see that the Party Method has been added to the object game
-  console.log(game)
+  // console.log(game)
+  
+  /*
+  Exercise 15
+  1. Now, complete gyms with a difficulty below 8. 
+  Reflect on how this is similar to or different from the previous gym 
+  exercises.
+  (change the value of `complete` in the qualifying objects
+   from false to true).
+  
+  Solve Exercise 15 here:
+  */
+ console.log(game.gyms)
+ 
+const completeGymsBelow8 = () => {
+  game.gyms.filter((gym) => {
+    if (gym.difficulty < 8){
+      gym.completed = true
+    }
+  })
+}
+completeGymsBelow8()
+// console.log(game.gyms)
+
+
+
+
+
+
+/*
+Exercise 16
+1. Log the entire `game` object to the console. 
+Take a moment to review the changes you've made throughout the exercises.
+
+
+Solve Exercise 16 here:
+*/
+
+
+
 
