@@ -94,13 +94,17 @@ the `completed` property.
 
 Solve Exercise 6 here:
 */
+console.log(game.gyms)
 
-game.gyms.map((gym) => {
-  if (gym.difficulty <= 3) {
-    gym.completed = true
-  }
-})
-// console.log(game.gyms)
+const completeGymsBelow3 = () => {
+    game.gyms.map((gym) => {
+      if (gym.difficulty < 3) {
+      gym.completed = true
+    }
+    })
+}
+completeGymsBelow3()
+console.log(game.gyms)
 
 
 /*
@@ -273,7 +277,7 @@ game.gymStatus = () => {
       gymTally.incompleted += 1
     }
   })
-  console.log(gymTally)
+  // console.log(gymTally)
 }
 // console.log(game.gyms)
 // game.gymStatus()
@@ -312,7 +316,7 @@ game.partyCount = () => {
   
   Solve Exercise 15 here:
   */
- console.log(game.gyms)
+//  console.log(game.gyms)
  
 const completeGymsBelow8 = () => {
   game.gyms.filter((gym) => {
@@ -337,7 +341,7 @@ Take a moment to review the changes you've made throughout the exercises.
 
 Solve Exercise 16 here:
 */
-console.log(game)
+// console.log(game)
 
 
 
